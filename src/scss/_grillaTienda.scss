@@ -1,0 +1,11 @@
+.grillaTienda{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 80px 600px auto auto;
+    grid-template-areas: "nav    nav    nav    nav"
+                         "header header header header"
+                         "main   main   main   main"
+                         "footer footer footer footer";
+    background-image: url(../img/main.jpg);
+    background-size: contain;
+}

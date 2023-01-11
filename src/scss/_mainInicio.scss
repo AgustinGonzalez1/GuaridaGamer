@@ -1,0 +1,55 @@
+.mainInicio{
+    grid-area: main;
+
+    > .textoEntrada{
+        width: 100%;
+        background-color: $colorFondo;
+        color: $colorLetra;
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 10px;
+
+        > h2{
+            padding-bottom: 5px;
+        }
+
+        > p{
+            padding: 0px 20px;
+        }
+
+        > div{
+            display: flex;
+            justify-content: center;
+
+            > .efecto{
+                display: block;
+                width: 23ch;
+                border-right: 4px solid;
+                white-space: nowrap;
+                animation: typing 3s steps(28) alternate infinite, blink .5s infinite step-end alternate;
+                animation-delay: 2s;
+                overflow: hidden;
+            }
+        }
+    }
+
+    > .divTitulo{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: $colorFondo;
+
+        > h2{
+            color: $colorLetra;
+            text-align: center;
+        }
+    }
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50%{ border-color: transparent; }
+}

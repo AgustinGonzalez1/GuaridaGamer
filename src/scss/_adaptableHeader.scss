@@ -1,0 +1,43 @@
+@media (max-width:1000px) {
+    .grillaInicio, .grillaEventos, .grillaNosotros, .grillaNoticias, .grillaTienda{
+        grid-template-rows: 80px 550px auto auto;
+    }
+}
+@media (max-width:900px) {
+    .grillaInicio, .grillaEventos, .grillaNosotros, .grillaNoticias, .grillaTienda{
+        grid-template-rows: 80px 500px auto auto;
+    }
+}
+@media (max-width:820px) {
+    .grillaInicio, .grillaEventos, .grillaNosotros, .grillaNoticias, .grillaTienda{
+        grid-template-rows: 80px 450px auto auto;
+    }
+}
+@media (max-width:740px) {
+    .grillaInicio, .grillaEventos, .grillaNosotros, .grillaNoticias, .grillaTienda{
+        grid-template-rows: 80px 400px auto auto;
+    }
+}
+@media (max-width:670px) {
+    .grillaInicio, .grillaEventos, .grillaNosotros, .grillaNoticias, .grillaTienda{
+        grid-template-rows: 80px 350px auto auto;
+    }
+}
+@media (max-width:580px) {
+    .grillaInicio, .grillaEventos, .grillaNosotros, .grillaNoticias, .grillaTienda{
+        grid-template-rows: 80px 300px auto auto;
+    }
+}
+@media (max-width:490px) {
+    .grillaInicio, .grillaEventos, .grillaNosotros, .grillaNoticias, .grillaTienda{
+        grid-template-rows: 80px 250px auto auto;
+    }
+    .headerInicio > div > h1, .headerEventos > div > h1, .headerNosotros > div > h1, .headerNoticias > div > h1, .headerTienda > div > h1{
+        font-size: 26px;
+    }
+}
+@media (max-width:400px) {
+    .grillaInicio, .grillaEventos, .grillaNosotros, .grillaNoticias, .grillaTienda{
+        grid-template-rows: 80px 200px auto auto;
+    }
+}

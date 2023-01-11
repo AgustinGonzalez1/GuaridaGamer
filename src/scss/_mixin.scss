@@ -1,0 +1,11 @@
+@mixin pButton($width, $border){
+    display: block;
+    border: $border;
+    font-weight: bold;
+    width: $width;
+    padding: 5px;
+    color: $colorLetra;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .5s;
+}

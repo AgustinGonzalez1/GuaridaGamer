@@ -1,0 +1,85 @@
+.mainNosotros{
+    grid-area: main;
+
+    > .ubicacion{
+
+        > h2{
+            color: $colorLetra;
+            background-color: $colorFondo;
+            text-align: center;
+            padding: 5px;
+            margin: 50px 0px 0px 0px;
+        }
+
+        > p{
+            color: $colorLetra;
+            background-color: $colorFondo;
+            text-align: center;
+            padding: 5px;
+        }
+
+        > .maps{
+            display: flex;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 20px auto;
+            border: solid 3px $colorPrincipal;
+            background-color: $colorFondo;
+            border-radius: 5px;
+
+            @media(max-width:1020px){
+                margin: 20px 10px;
+            }
+
+            > iframe{
+                width: 100%;
+                margin: 10px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    > .precios{
+
+        > h2{
+            color: $colorLetra;
+            background-color: $colorFondo;
+            text-align: center;
+            padding: 5px;
+            margin: 30px 0px 0px 0px;
+        }
+
+        > div{
+            max-width: 1000px;
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+
+            > table{
+                background-color: $colorFondo;
+                color: $colorLetra;
+                border-collapse: collapse;
+            }
+        }
+    }
+}
+
+th,td{
+    padding: 10px;
+    text-align: center;
+    border: solid 3px $colorPrincipal;
+}
+
+.mainNosotros > .precios > div > .vertical{
+    display: none;
+}
+
+@media(max-width:550px){
+    .mainNosotros > .precios > div > .horizontal{
+        display: none;
+    }
+    .mainNosotros > .precios > div > .vertical{
+        display: block;
+    }
+}
+

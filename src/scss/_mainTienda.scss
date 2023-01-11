@@ -1,0 +1,11 @@
+.mainTienda{
+    grid-area: main;
+
+    > h2{
+        text-align: center;
+        color: $colorLetra;
+        background-color: $colorFondo;
+        padding: 5px;
+        margin: 50px 0px;
+    }
+}

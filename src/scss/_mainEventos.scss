@@ -1,0 +1,11 @@
+.mainEventos{
+    grid-area: main;
+
+    > h2{
+        color: $colorLetra;
+        background-color: $colorFondo;
+        text-align: center;
+        padding: 5px;
+        margin: 50px 0px;
+    }
+}

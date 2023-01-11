@@ -1,0 +1,270 @@
+.mainNosotros{
+
+    > h2{
+        color: $colorLetra;
+        background-color: $colorFondo;
+        text-align: center;
+        padding: 5px;
+        margin: 20px 0px 10px;
+    }
+
+    > .trabajar{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: center;
+        column-gap: 20px;
+        margin-bottom: 20px;
+
+        > .trabajar__nosotros{
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            background-color: $colorFondo;
+            border-radius: 5px;
+            border: solid 3px $colorPrincipal;
+
+            > img{
+                width: 100%;
+                padding: 10px;
+            }
+
+            > p{
+                color: $colorLetra;
+                text-align: justify;
+                padding: 0px 10px 10px;
+            }
+        }
+
+        > form{
+            background: $colorFondo;
+            padding:10px;
+            width:500px;
+            height: 320px;
+            text-align:center;
+            border-radius:5px;
+            border: $colorPrincipal solid 3px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-template-areas: "nombre apellido"
+                                 "email  email   "
+                                 "tel    tel     "
+                                 "boton  boton   ";
+            
+            @media (max-width:500px){
+                max-width: 350px;
+                grid-template-rows: repeat(5,1fr);
+                grid-template-areas: "nombre   nombre  "
+                                     "apellido apellido"
+                                     "email    email   "
+                                     "tel      tel     "
+                                     "boton    boton   "
+            }
+
+            > input{
+                display:block;
+                margin:auto;
+                padding:12px 32px;
+                background:none;
+                border:none;
+                border-bottom:3px solid $colorPrincipal;
+                width: 70%;
+                color:#fff;
+                font-weight: bold;
+                outline:none;
+                letter-spacing:2px;
+                font-size:15px;
+                text-align:center;
+                transition:0.5s;
+
+                &::placeholder{
+                    color:#fff;
+                }
+
+                &:focus{
+                    width:100%;
+                    border-color: #fff;
+                }
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus {
+            box-shadow:0 0 0 30px rgb(0, 0, 0) inset ;
+            -webkit-text-fill-color: white;
+            }
+
+        }
+    }
+}
+
+@each $clave, $valor in (1:nombre, 2:apellido, 3:email, 4:tel, 5:boton){
+    @if($clave == 5){
+        button:nth-child(#{$clave}){
+            grid-area: $valor;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            line-height: 14px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            color: $colorLetra;
+            padding: 15px 30px;
+            background-color: transparent;
+            transition: all 0.1s ease;
+            width: 150px;
+            height: 50px;
+            justify-self: center;
+            font-family: 'Rubik', sans-serif;
+            font-weight: bold;
+            align-self: center;
+        }
+    }
+    @else{
+        input:nth-child(#{$clave}){
+            grid-area:$valor;
+        }
+    }
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none; 
+margin: 0; 
+}
+
+/*animacion boton*/
+.mainNosotros > .trabajar > form > button:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+
+.mainNosotros > .trabajar > form > button:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+
+.mainNosotros > .trabajar > form > button span{
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+}
+
+.mainNosotros > .trabajar > form > button span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $colorPrincipal);
+    animation: line1 1s linear infinite;
+}
+
+.mainNosotros > .trabajar > form > button:hover span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffff);
+    animation: line1 1s linear infinite;
+}
+
+.mainNosotros > .trabajar > form > button span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, $colorPrincipal);
+    animation: line2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+.mainNosotros > .trabajar > form > button:hover span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ffff);
+    animation: line2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+.mainNosotros > .trabajar > form > button span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, transparent, $colorPrincipal);
+    animation: line3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.mainNosotros > .trabajar > form > button:hover span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, transparent, #ffff);
+    animation: line3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.mainNosotros > .trabajar > form > button span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, $colorPrincipal);
+    animation: line4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+.mainNosotros > .trabajar > form > button:hover span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ffff);
+    animation: line4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes line1 {
+    0% {
+    left: -100%;
+    }
+    50%,
+    100% {
+    left: 100%;
+    }
+}
+
+@keyframes line2 {
+    0% {
+    top: -100%;
+    }
+    50%,
+    100% {
+    top: 100%;
+    }
+}
+@keyframes line3 {
+    0% {
+    right: -100%;
+    }
+    50%,
+    100% {
+    right: 100%;
+    }
+}
+@keyframes line4 {
+    0% {
+    bottom: -100%;
+    }
+    50%,
+    100% {
+    bottom: 100%;
+    }
+}
+/*animacion boton*/

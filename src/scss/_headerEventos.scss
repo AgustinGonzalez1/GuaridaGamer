@@ -1,0 +1,20 @@
+.headerEventos{
+    grid-area: header;
+    background-image: url(../img/eventos.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    > div{
+        background-color: $colorFondo;
+        height: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > h1{
+            color: $colorLetra;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.noticias{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    > .noticia{
+        @extend %noticia;
+
+        > .noticias__video{
+            width: 100%;
+        }
+
+        > .noticias__h3{
+            padding: 20px;
+            text-align: center;
+            color: $colorLetra;
+        }
+
+        > .noticias__p{
+            padding: 0px 20px 20px 20px;
+            text-align: center;
+            color: $colorLetra;
+        }
+
+        > img{
+            width: 100%;
+            padding: 10px;
+            background-size: cover;
+        }
+    }
+}

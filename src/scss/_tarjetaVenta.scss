@@ -1,0 +1,43 @@
+.ventas{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    > .venta{
+        @extend %venta;
+
+        > .venta__img{
+            width: 100%;
+            padding: 10px;
+        }
+
+        > .venta__h3{
+            padding: 20px;
+            text-align: center;
+            color: $colorLetra;
+        }
+
+        > .venta__p{
+            padding: 0px 20px 20px 20px;
+            text-align: center;
+            color: $colorLetra;
+        }
+
+        > div{
+            display: flex;
+            justify-content: center;
+
+            > .venta__a{
+                @include pButton(auto,#0597F2 solid 2px);
+                flex-wrap: nowrap;
+                padding: 5px;
+                margin-bottom: 10px;
+                justify-self: center;
+
+                &:hover{
+                    background-color: #0597F2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.mainInicio{
+
+    > .verMas{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        text-align: center;
+
+        > a{
+            @include pButton(100px, #F2059F solid 2px);
+
+            &:hover{
+                background-color: #F2059F;
+            }
+        }
+    }
+}
+
+

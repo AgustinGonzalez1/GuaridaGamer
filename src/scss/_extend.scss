@@ -1,0 +1,16 @@
+%venta{
+    border: solid 3px $colorPrincipal;
+    background-color: $colorFondo;
+    border-radius: 5px;
+    margin: 20px;
+    width: 350px;
+}
+
+%noticia{
+    padding: 20px;
+    border: solid 3px $colorPrincipal;
+    border-radius: 5px;
+    background-color: $colorFondo;
+    margin: 20px;
+    width: 550px;
+}

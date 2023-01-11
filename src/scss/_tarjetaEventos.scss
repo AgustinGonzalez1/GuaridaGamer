@@ -1,0 +1,99 @@
+.mainEventos{
+
+    > .evento{
+        display: grid;
+        grid-template-columns: 150px repeat(3,auto);
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: "fecha lyh  texto boton"
+                             "mapa  mapa mapa  mapa";
+        max-width: 1000px;
+        margin: 0px auto 30px auto;
+        border: solid 3px $colorPrincipal;
+        background-color: $colorFondo;
+        border-radius: 5px;
+
+        @media (max-width:999px){
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows: repeat(3,auto);
+            grid-template-areas: "fecha lyh   boton"
+                                 "texto texto texto"
+                                 "mapa  mapa  mapa";
+            max-width: 650px;
+        }
+
+        @media (max-width: 670px){
+            grid-template-columns: repeat(2,auto);
+            grid-template-rows: repeat(4,auto);
+            grid-template-areas: "fecha lyh  "
+                                 "texto texto"
+                                 "boton boton"
+                                 "mapa  mapa ";
+            max-width: 400px;
+        }
+
+        @media (max-width: 420px){
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        > .evento__div1{
+            grid-area: fecha;
+            color: $colorLetra;
+            align-items: center;
+            text-align: center;
+            align-self: center;
+            margin: 20px;
+        }
+
+        > .evento__div2{
+            grid-area: lyh;
+            color: $colorLetra;
+            text-align: center;
+            align-items: center;
+            align-self: center;
+            margin: 20px;
+        }
+
+        > .evento__div3{
+            grid-area: texto;
+            color: $colorLetra;
+            text-align: center;
+            align-items: center;
+            align-self: center;
+            margin: 20px;
+        }
+
+        > .evento__div4{
+            display: flex;
+            grid-area: boton;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+
+            > a{
+                display: block;
+                padding: 10px 40px;
+                color: $colorLetra;
+                border-radius: 5px;
+                border: 3px #0597F2 solid;
+                transition: .5s;
+
+                &:hover{
+                    background-color: #0597F2;
+                }
+            }
+        }
+
+        > .evento__div5{
+            grid-area: mapa;
+            display: flex;
+            justify-content: center;
+
+            > iframe{
+                width: 100%;
+                margin: 20px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
