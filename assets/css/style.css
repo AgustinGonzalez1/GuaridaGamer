@@ -605,6 +605,11 @@ footer > p {
   margin: 20px;
   border-radius: 5px;
 }
+@media (max-width: 350px) {
+  .mainEventos > .evento > .evento__div5 > iframe {
+    width: 90%;
+  }
+}
 
 .grillaNosotros {
   display: grid;
@@ -659,15 +664,20 @@ footer > p {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
-@media (max-width: 1020px) {
+@media (max-width: 1040px) {
   .mainNosotros > .ubicacion > .maps {
-    margin: 20px 10px;
+    margin: 20px 20px;
   }
 }
 .mainNosotros > .ubicacion > .maps > iframe {
   width: 100%;
   margin: 10px;
   border-radius: 5px;
+}
+@media (max-width: 380px) {
+  .mainNosotros > .ubicacion > .maps > iframe {
+    width: 94%;
+  }
 }
 .mainNosotros > .precios > h2 {
   color: #ffffff;
@@ -686,6 +696,11 @@ footer > p {
   background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   border-collapse: collapse;
+}
+@media (max-width: 390px) {
+  .mainNosotros > .precios > div > table {
+    margin: 0 20px;
+  }
 }
 
 th, td {
@@ -738,6 +753,11 @@ th, td {
   text-align: justify;
   padding: 0px 10px 10px;
 }
+@media (max-width: 390px) {
+  .mainNosotros > .trabajar > .trabajar__nosotros {
+    margin: 0 20px;
+  }
+}
 .mainNosotros > .trabajar > form {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
@@ -756,6 +776,11 @@ th, td {
     max-width: 350px;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "nombre   nombre  " "apellido apellido" "email    email   " "tel      tel     " "boton    boton   ";
+  }
+}
+@media (max-width: 390px) {
+  .mainNosotros > .trabajar > form {
+    margin: 0 20px;
   }
 }
 .mainNosotros > .trabajar > form > input {

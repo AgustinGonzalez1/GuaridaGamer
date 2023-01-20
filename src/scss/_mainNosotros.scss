@@ -27,14 +27,17 @@
             background-color: $colorFondo;
             border-radius: 5px;
 
-            @media(max-width:1020px){
-                margin: 20px 10px;
+            @media(max-width:1040px){
+                margin: 20px 20px;
             }
 
             > iframe{
                 width: 100%;
                 margin: 10px;
                 border-radius: 5px;
+                @media (max-width:380px){
+                    width: 94%;
+                }
             }
         }
     }
@@ -59,6 +62,9 @@
                 background-color: $colorFondo;
                 color: $colorLetra;
                 border-collapse: collapse;
+                @media (max-width:390px){
+                    margin: 0 20px;
+                }
             }
         }
     }
